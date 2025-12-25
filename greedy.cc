@@ -12,6 +12,8 @@ using namespace std;
 
 struct point {
     double x, y;
+
+    point(double x_, double y_) : x(x_), y(y_) {} // old C++
 };
 
 void read_input_(vector<point>& cities, vector<int>& ids) {
