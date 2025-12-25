@@ -3,3 +3,6 @@ Random.cc
 
 NearestNeighbor.cc
 98.15
+
+BruteNearestNeighbor.cc
+98.78

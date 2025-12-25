@@ -35,16 +35,14 @@ double distance(const point& a, const point& b) {
     return sqrt(distance_squared(a, b));
 }
 
-void solve() {
-    vector<point> cities;
-    vector<int> ids;
-    read_input_(cities, ids);
-    int n = cities.size();
+vector<point> cities;
+vector<int> ids;
+int n;
 
+pair<double, vector<int>> try_source(int source_node) {
     vector<int> vertex_path;
     vector<bool> used(n);
 
-    const int source_node = 0;
     int node = source_node;
     used[node] = true;
     vertex_path.emplace_back(node);
@@ -71,7 +69,35 @@ void solve() {
         vertex_path.emplace_back(node);
     }
 
-    for (int u : vertex_path)
+    double dist = 0;
+    for (int i = 0; i < n - 1; i++)
+        dist += distance(cities[vertex_path[i]], cities[vertex_path[i + 1]]);
+    dist += distance(cities[vertex_path[0]], cities[vertex_path[n - 1]]);
+
+    return {dist, vertex_path};
+}
+
+void solve() {
+    read_input_(cities, ids);
+    n = cities.size();
+
+    int start_time = time(nullptr);
+    int source_node = 0;
+
+    double best_dist = 1e100;
+    vector<int> best_path;
+
+    while (time(nullptr) - start_time < 60 && source_node < n) {
+        auto [dist, path] = try_source(source_node);
+        source_node++;
+
+        if (dist < best_dist) {
+            best_dist = dist;
+            best_path = path;
+        }
+    }
+
+    for (int u : best_path)
         cout << ids[u] << '\n';
 }
 
