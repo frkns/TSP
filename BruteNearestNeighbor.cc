@@ -1,13 +1,13 @@
 #include "bits/stdc++.h"
 using namespace std;
 
-struct point {
+struct Point {
     double x, y;
 
-    point(double x_, double y_) : x(x_), y(y_) {} // old C++
+    Point(double x_, double y_) : x(x_), y(y_) {} // old C++
 };
 
-void read_input_(vector<point>& cities, vector<int>& ids) {
+void read_input_(vector<Point>& cities, vector<int>& ids) {
     int id;
     double x, y;
     while (cin >> id >> x >> y) {
@@ -16,17 +16,17 @@ void read_input_(vector<point>& cities, vector<int>& ids) {
     }
 }
 
-double distance_squared(const point& a, const point& b) {
+double distance_squared(const Point& a, const Point& b) {
     double xdiff = a.x - b.x;
     double ydiff = a.y - b.y;
     return xdiff * xdiff + ydiff * ydiff;
 }
 
-double distance(const point& a, const point& b) {
+double distance(const Point& a, const Point& b) {
     return sqrt(distance_squared(a, b));
 }
 
-vector<point> cities;
+vector<Point> cities;
 vector<int> ids;
 int n;
 
