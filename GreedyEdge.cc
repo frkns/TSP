@@ -73,7 +73,7 @@ void solve() {
             edge_weights.emplace_back(distance_squared(p, q), Edge(u, v));
         }
     }
-    ranges::sort(edge_weights);
+    sort(edge_weights.begin(), edge_weights.end());
 
     UnionFind uf(n);
     vector<int> degree(n);
