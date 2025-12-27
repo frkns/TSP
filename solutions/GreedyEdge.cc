@@ -33,8 +33,6 @@ struct UnionFind {
 
     UnionFind(int n) : par(n), size(n, 1) {
         iota(par.begin(), par.end(), 0);
-        for (int i = 0; i < n; i++)
-            assert(size[i] == 1);
     }
 
     int find(int u) {
