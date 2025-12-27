@@ -1,4 +1,4 @@
-input_file = example_input
+input_file = ali535
 
 all:
 	@echo "Running on $(input_file)\n"; \

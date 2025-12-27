@@ -1,6 +1,6 @@
 The programs are approximate solutions to the (metric) Traveling Salesman Problem
 
-I/O format follows https://optil.io/optilion/problem/2
+I/O format follows https://optil.io/optilion/problem/2. `ali535` is an example input.
 
 
 | source | wtf does it do? |
@@ -12,11 +12,18 @@ I/O format follows https://optil.io/optilion/problem/2
 
 Can combine with k-Opt, LK, etc. Not implemented.
 
-| source | score | time (s) |
+| source | score (TSPLIB) | time (s) |
 |-|-|-|
 | Random.cc | 5.05  | 0.00 |
 | NearestNeighbor.cc | 98.15 | 0.00 |
 | GreedyEdge.cc | 98.30 | 0.39 |
 | BruteNearestNeighbor.cc | 98.78 | 27.25 |
+
+| source | distance (ali535), ± 95% CI |
+|-|-|
+| Random.cc | 5.05 |
+| NearestNeighbor.cc | 98.15 |
+| GreedyEdge.cc | 98.30 | 0.39 |
+| BruteNearestNeighbor.cc | 98.78 |
 
 

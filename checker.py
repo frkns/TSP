@@ -76,7 +76,7 @@ def checker():
         b = points[tour[(i + 1) % n]]
         total += math.hypot(a[0] - b[0], a[1] - b[1])
 
-    print(f'Total distance: {total:.4f}')
+    print(f'Total distance: {total:.2f}')
 
 
 if __name__ == '__main__':
