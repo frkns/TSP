@@ -94,7 +94,7 @@ void solve() {
         edge_path.emplace_back(u, v);
     }
 
-    // do euler path on edge_path (euler tour formed by connecting endpoints)
+    // find euler path on edge_path (euler tour formed by connecting endpoints)
 
     vector<vector<int>> adj(n);
     for (auto& [u, v] : edge_path) {
