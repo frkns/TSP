@@ -21,9 +21,9 @@ Can combine with k-Opt, LK, etc. Not implemented.
 
 | source | distance (ali535), ± 95% CI |
 |-|-|
-| Random.cc | 5.05 |
-| NearestNeighbor.cc | 98.15 |
-| GreedyEdge.cc | 98.30 | 0.39 |
-| BruteNearestNeighbor.cc | 98.78 |
+| GreedyEdge.cc | 2405.57 |
+| BruteNearestNeighbor.cc | 2434.00 |
+| NearestNeighbor.cc | 2671.07 |
+| Random.cc | 39357.46 ± 163.72 |
 
 

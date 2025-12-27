@@ -33,7 +33,7 @@ def run_solution(executable, input_data):
 
 def checker():
     if len(sys.argv) != 2:
-        print(f'usage: {sys.argv[0]} <solutions/sol.cc> < input', file=sys.stderr)
+        print(f'usage: {sys.argv[0]} <solutions/sol.cc> < input_file', file=sys.stderr)
         sys.exit(1)
 
     src = sys.argv[1]
