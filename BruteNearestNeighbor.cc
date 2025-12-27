@@ -93,7 +93,7 @@ void solve() {
         cout << ids[u] << '\n';
 }
 
-int32_t main() {
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
