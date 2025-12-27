@@ -32,8 +32,8 @@ def run_solution(executable, input_data):
 
 
 def checker():
-    if len(sys.argv) != 2:
-        print(f'usage: {sys.argv[0]} <solutions/sol.cc> < input_file', file=sys.stderr)
+    if len(sys.argv) != 3:
+        print(f'usage: python {sys.argv[0]} <solutions/sol.cc> <input_file>', file=sys.stderr)
         sys.exit(1)
 
     src = sys.argv[1]
@@ -41,7 +41,12 @@ def checker():
         print(f'file not found: {src}', file=sys.stderr)
         sys.exit(1)
 
-    input_data = open(0).read()
+    input_file = sys.argv[2]
+    if not os.path.exists(src):
+        print(f'file not found: {input_file}', file=sys.stderr)
+        sys.exit(1)
+
+    input_data = open(input_file).read()
     if not input_data.strip():
         print('no input')
         return
