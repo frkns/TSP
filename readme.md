@@ -16,6 +16,7 @@ Can combine with k-Opt, LK, etc. Not implemented.
 |-|-|
 | Random.cc | 5.05  |
 | NearestNeighbor.cc | 98.15 |
+| GreedyEdge.cc | 98.30 |
 | BruteNearestNeighbor.cc | 98.78 |
 
 
