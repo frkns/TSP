@@ -1,14 +1,5 @@
-// ---===
-#include "bits/extc++.h"
 #include "bits/stdc++.h"
-#ifdef LOCAL
-#include "/tools-ln/overloads.cc"
-#else
-#define debug(...) void()
-constexpr bool LOCAL = false;
-#endif
 using namespace std;
-// ===---
 
 struct point {
     double x, y;
@@ -87,6 +78,7 @@ void solve() {
     double best_dist = 1e100;
     vector<int> best_path;
 
+    // run until TL
     while (time(nullptr) - start_time < 60 && source_node < n) {
         auto [dist, path] = try_source(source_node);
         source_node++;

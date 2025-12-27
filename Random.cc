@@ -1,14 +1,5 @@
-// ---===
-#include "bits/extc++.h"
 #include "bits/stdc++.h"
-#ifdef LOCAL
-#include "/tools-ln/overloads.cc"
-#else
-#define debug(...) void()
-constexpr bool LOCAL = false;
-#endif
 using namespace std;
-// ===---
 
 void solve() {
     vector<int> ids;

@@ -1,14 +1,5 @@
-// ---===
-#include "bits/extc++.h"
 #include "bits/stdc++.h"
-#ifdef LOCAL
-#include "/tools-ln/overloads.cc"
-#else
-#define debug(...) void()
-constexpr bool LOCAL = false;
-#endif
 using namespace std;
-// ===---
 
 struct point {
     double x, y;
@@ -29,10 +20,6 @@ double distance_squared(const point& a, const point& b) {
     double xdiff = a.x - b.x;
     double ydiff = a.y - b.y;
     return xdiff * xdiff + ydiff * ydiff;
-}
-
-double distance(const point& a, const point& b) {
-    return sqrt(distance_squared(a, b));
 }
 
 void solve() {
