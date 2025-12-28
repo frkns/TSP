@@ -1,4 +1,4 @@
-The programs are approximate solutions to the (metric) Traveling Salesman Problem
+The programs are approximate solutions to the (Euclidean) Traveling Salesman Problem
 
 I/O format follows https://optil.io/optilion/problem/2. `ali535` is an example input.
 
